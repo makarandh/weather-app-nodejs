@@ -10,7 +10,7 @@ const messageTwo = document.getElementById("message-2")
 weatherForm.addEventListener("submit", (e) => {
     e.preventDefault()
     const searchLocation = search.value
-    const url2fetch = document.URL+"weather?address=" + searchLocation
+    const url2fetch = "/weather?address=" + searchLocation
     messageTwo.innerText = `Fetching weather for ${searchLocation}...`
     messageOne.innerText = ""
     fetch(url2fetch).then((response) => {
@@ -28,5 +28,3 @@ weatherForm.addEventListener("submit", (e) => {
         })
     })
 })
-
-
