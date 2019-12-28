@@ -42,8 +42,8 @@ app.get("/about", (req, res) => {
 
 app.get("/help", (req, res) => {
     res.render("help", {
-        title: "Help Me Help You",
-        content: "Don't take it to your heart. Take it in your hand..... and shake it off, shake it off.",
+        title: "Help",
+        content: "In the textbox on the homepage, type in the name of a place, and click on search.",
         name: "Mak"
     })
 })
@@ -73,32 +73,6 @@ app.get("/weather", (req, res) => {
                 summary: summaryfull,
             })
         })
-    })
-})
-
-
-app.get("/products", (req, res) => {
-    if (!req.query.search) {
-        return res.send({
-            error: "You must provide a search term"
-        })
-    }
-    
-    res.send({
-        products: [
-            {
-                name: "dildo",
-                price: 14.56
-            },
-            {
-                name: "vibrator",
-                price: 35.79
-            },
-            {
-                name: "lube",
-                price: 6.99
-            }
-        ]
     })
 })
 
